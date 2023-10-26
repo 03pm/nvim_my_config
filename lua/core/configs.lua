@@ -5,9 +5,9 @@ vim.wo.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.smartindent = true
-vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+
 
 
 -- searching
@@ -17,7 +17,7 @@ vim.opt.showmatch = true -- подсветка
 -- autocomplet
 vim.opt.completeopt = 'menuone,noselect'
 
--- clipboard
+-- clipboard:
 vim.opt.clipboard = "unnamedplus"
 
 -- show spaces

@@ -44,5 +44,6 @@ require("lazy").setup({
         },
         lazy = false,
     },
-    {'akinsho/toggleterm.nvim', version = "*", config = true}
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    "alexghergh/nvim-tmux-navigation"
 })
