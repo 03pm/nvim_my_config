@@ -8,7 +8,8 @@ vim.opt.smartindent = true
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
-
+-- By default title is off. Needed for detecting window as neovim instance (sworkstyle)
+vim.cmd "set title"
 
 -- searching
 vim.opt.ignorecase = true -- игнор регистра при поиске
