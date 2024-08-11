@@ -12,24 +12,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "phaazon/hop.nvim",
     {
-        "nvim-neo-tree/neo-tree.nvim",
+        "nvim-neo-tree/neo-tree.nvim", -- список файлов проекта
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim"
-    	}
+        }
     },
     {
-        "nvim-treesitter/nvim-treesitter",
+        "nvim-treesitter/nvim-treesitter", -- подсветка синтаксиса
         build = ":TSUpdate"
     },
-    "neovim/nvim-lspconfig",
+
+    "neovim/nvim-lspconfig", -- конфиг для lsp клиента, которые втроен в nvim
+    "williamboman/mason.nvim", -- менеджер пакетов
+    "williamboman/mason-lspconfig.nvim", -- мост который соединяет lsp и менеджер пакетов
     "rebelot/kanagawa.nvim",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
@@ -45,5 +45,17 @@ require("lazy").setup({
         lazy = false,
     },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-    "alexghergh/nvim-tmux-navigation"
+    "alexghergh/nvim-tmux-navigation",
+    {
+    -- The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement}, respectively.
+    "kylechui/nvim-surround", -- работа с тегами, ковычками, скобками
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+        end
+    },
+    {'kevinhwang91/nvim-ufo', version = "*", dependencies = 'kevinhwang91/promise-async'}
 })

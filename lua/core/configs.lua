@@ -24,3 +24,7 @@ vim.opt.clipboard = "unnamedplus"
 -- show spaces
 vim.opt.listchars = {space = "·"}
 vim.opt.list = true
+
+
+-- disable swapfile
+vim.opt.swapfile = false
