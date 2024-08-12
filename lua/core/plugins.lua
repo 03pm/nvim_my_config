@@ -45,7 +45,6 @@ require("lazy").setup({
         lazy = false,
     },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-    "alexghergh/nvim-tmux-navigation",
     {
     -- The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement}, respectively.
     "kylechui/nvim-surround", -- работа с тегами, ковычками, скобками
