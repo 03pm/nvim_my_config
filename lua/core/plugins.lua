@@ -56,5 +56,12 @@ require("lazy").setup({
         })
         end
     },
-    {'kevinhwang91/nvim-ufo', version = "*", dependencies = 'kevinhwang91/promise-async'}
+    {'kevinhwang91/nvim-ufo', version = "*", dependencies = 'kevinhwang91/promise-async'},
+    {
+        'barrett-ruth/live-server.nvim',
+        build = 'pnpm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+    },
+    'andymass/vim-matchup', -- подсветка парных тегов и закрывающий элементов 
 })
