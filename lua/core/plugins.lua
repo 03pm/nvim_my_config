@@ -12,6 +12,21 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    { -- tabbar
+        'romgrk/barbar.nvim',
+        dependencies = {
+          'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+          'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+    },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    },
+    {   -- статуслайн 
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     {
         "nvim-neo-tree/neo-tree.nvim", -- список файлов проекта
         branch = "v3.x",
@@ -37,7 +52,6 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "windwp/nvim-autopairs",
     "windwp/nvim-ts-autotag",
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     {
         'numToStr/Comment.nvim',
         opts = {
